@@ -1,0 +1,32 @@
+Ian Piskulic
+Section B
+
+
+Card Shuffling
+
+1. Cut deck of 52 cards into equal piles of 26 each.
+2. Put a pile of 26 in each hand.
+3. Put the top card in your left hand over the top card in your right hand.
+4. Repeat this for the rest of the cards until you have one whole deck.
+5. Repeat steps 1-4 twice.
+
+
+Word Search
+
+1. Search for the first letter in the word.
+2. Search for the first letter by going through the rows right to left.
+3. If first letter is found, scan touching letters for the next letter.
+4. If next letter is found, continue in the direction of which it was found.
+If not, go back to step 2.
+5. Repeat step 4 until whole word is found.
+
+
+4-digit Subraction
+
+1. Enter first 4 digit number and name it abcd.
+2. Enter second 4 digit number and name it wxyz.
+3. If wxyz is larger than abcd, repeat steps 1 and 2.
+4. If the first digit in abcd is larger then the first digit of wxyz, then
+add 10 to first digit of abcd and subtract 1 from the second digit.
+5. Subtract both of the digits and bring down the difference.
+6. Repeat steps 4 and 5 for the other 3 digits.
