@@ -1,0 +1,31 @@
+/*
+Programmer: Ian Piskulic
+Section: D
+File: lab12.h
+Description: This program takes a time and outputs the next and
+previous times
+*/
+ 
+#ifndef LAB12_H
+#define LAB12_H 
+ 
+#include <iostream>
+
+using namespace std;
+
+//Class definition
+class Time{
+    int hour, minute, second;
+  public:
+    void read_in();
+    void print_out(int,int,int);
+    void nextSecond();
+    void previousSecond();
+};
+
+
+
+
+
+
+#endif

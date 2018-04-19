@@ -1,0 +1,53 @@
+/*
+Programmer: Ian Piskulic
+Section: D
+File: lab8.cpp
+*/
+
+#include "lab8.h"
+
+int main(){
+
+  //Main Variables
+  float num1, num2;
+  float diamArea;
+  float triArea;
+  float rectArea;
+  rectangle rect;
+  diamond dia;
+  triangle tri;
+
+  greet();
+  
+  //Takes in numbers for the triangle
+  cout<<"\nEnter the base and height of a triangle:";
+  read(num1, num2);
+  tri.m_base=num1;
+  tri.m_height=num2;
+  
+  //Takes in numbers for the diamond
+  cout<<"\nEnter the base and height of a diamond:";
+  read(num1, num2);
+  dia.m_base=num1;
+  dia.m_height=num2;
+  
+  //Takes in numbers for the rectangle
+  cout<<"\nEnter the length and width of a rectangle:";
+  read(num1, num2);
+  rect.m_length=num1;
+  rect.m_width=num2;
+  
+  //Calculates areas of shapes
+  triArea=area(tri);
+  diamArea=area(dia);
+  rectArea=urea(rect);
+  
+  //Outputs results
+  cout<<"Area of triangle is:"<<triArea<<endl;
+  cout<<"Area of diamond is:"<<diamArea<<endl;
+  cout<<"Area of rectangle is:"<<rectArea<<endl;
+  
+  signoff();
+
+  return 0;
+}

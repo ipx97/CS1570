@@ -1,0 +1,62 @@
+/*
+Programmer: Ian Piskulic      Date: 3/18/2015
+File: hw7.h                 Section: B
+Purpose: To match the bullet information with a gun.
+*/
+
+#include "hw7.h"
+
+int main(){
+  //Main Variables
+  bullet data[SIZE];
+  bullet gunIn;
+  bool match = false;
+  string matchName;
+  char again;
+  bool exit = false;
+  
+  //Greets the user
+  greeting();
+  
+  do{
+    //Assigns "random" values to the members of each struct
+    database(data,SIZE);
+  
+    //Database Output
+    outputData(data,SIZE);
+  
+    //Get Data
+    getBullet(gunIn);
+  
+    //Finds the match
+    for (int i = 0;i<SIZE;i++){
+      if((gunIn.m_caliber == data[i].m_caliber)
+      &&(gunIn.m_grooves == data[i].m_grooves)
+      &&(gunIn.m_widthOfL == (data[i].m_widthOfL + 0.001)
+      ||(data[i].m_widthOfL - 0.001)||(data[i].m_widthOfL))
+      &&(gunIn.m_widthOfG == (data[i].m_widthOfG + 0.001)
+      ||(data[i].m_widthOfG - 0.001)||(data[i].m_widthOfG))
+      &&(gunIn.m_marks == data[i].m_marks)){
+        match = true;
+        matchName = data[i].m_owner;
+      }
+    }
+    
+    //Displays results
+    results(match,matchName);
+    
+    //Checks if the user wants to check another bullet
+    do{
+      cout<<"\nWould you like to check another bullet?(y/n):";
+      cin>>again;
+    }while(again != 'y' && again != 'n');
+    if (again == 'n')
+      exit = true;
+    
+  }while(exit == false);
+  
+  //Prints a signoff message to the console
+  signoff();
+  
+  return 0;
+}

@@ -1,0 +1,46 @@
+/*
+Programmer: Ian Piskulic      Date: 3/18/2015
+File: hw7.h                 Section: B
+Purpose: To match the bullet information with a gun.
+*/
+
+
+#include <iostream>
+#include <cstdlib> 
+#include <ctime>
+
+using namespace std;
+
+#ifndef HW7_H
+#define HW7_H
+
+//Structs
+struct bullet{
+  float m_caliber;
+  short m_grooves;
+  float m_widthOfL;
+  float m_widthOfG;
+  bool m_marks;
+  string m_owner;
+};
+
+//Prototypes
+
+//Description: Greets the user at the start of the program.
+//Pre: none
+//Post: Prints a welcome message to the console
+void greeting();
+void database(bullet data[],const int SIZE);
+void outputData(const bullet data[],const int SIZE);
+void getBullet(bullet& gunIn);
+void results(const bool match,const string matchName);
+void signoff();
+
+//Global Constants
+const int SIZE = 25;
+const float CALIBER22 = 0.22;
+const float CALIBER38 = 0.38;
+const float CALIBER50 = 0.5;
+const float GLMAX = 0.030;
+const float GLMIN = 0.025;
+#endif

@@ -1,0 +1,43 @@
+/*
+Programmer: Ian Piskulic
+Section: D
+File: lab9.cpp
+Purpose: To see if a random number is divisible by 2,3,4,5, and 6
+*/
+
+#include "lab9.h"
+
+int main (){
+  //Main Variables
+  int randNum;
+  int randArray[SIZE];
+  int divis = 2;
+  bool result;
+  
+  //Greets the user
+  greet();
+  
+  //Creates the random number
+  srand(time(NULL));
+  for(int i; i<SIZE; i++){
+    randArray[i] = rand() % 9 + 1;
+  }
+  
+  //Prints random number
+  printNumber(randArray);
+  
+  //Prints the results of the test
+  result = divisibleBy2(randArray);
+  printResult(divis, result);
+  result = divisibleBy3(randArray);
+  printResult(divis, result);
+  result = divisibleBy4(randArray);
+  printResult(divis, result);
+  result = divisibleBy5(randArray);
+  printResult(divis, result);
+  result = divisibleBy6(randArray);
+  printResult(divis, result);
+  
+  
+  return 0;  
+}

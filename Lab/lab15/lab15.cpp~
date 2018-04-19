@@ -1,0 +1,67 @@
+/*
+Programmer: Ian Piskulic
+Section: D
+File: lab15.cpp
+Purpose: To generate five random numbers between
+an upper and lower bound set by the user
+*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+int main(){
+  
+  int n;
+  int num;
+  int sum = 0;
+  int pwr = 3;
+  char repeatVal;
+  bool repeat = false;
+  
+  do{
+    try{
+      cout << "Please enter an integer value:";
+      cin >> n;
+      num = n;
+      
+      if(!cin.good())
+        throw num;
+      
+      cin.clear();
+      cin.ignore(10000,'\n');
+      
+      
+      while(n != 0){
+        int x = n % 10;
+        sum += pow(x,pwr);
+        n = n/10;
+      }
+      
+      if(num == sum)
+        cout << "\nThe number " << num << " is an armstrong number\n";
+      else
+        cout << "\nThe number " << num << " is not an armstrong number\n";
+      
+      repeat = false;
+    }
+  
+    catch(int e){
+      cout << "INVALID INPUT!\n\n";
+      
+      cout << "Would you like to enter a valid input?(y,n):";
+      cin.clear();
+      cin.ignore(10000,'\n');
+      cin >>  repeatVal;
+      
+        if(repeatVal = 'y')
+          repeat = true;
+        else if(repeatVal == 'n')
+          repeat = false;
+        
+    }
+  }while(repeat);
+  
+  return 0;
+}

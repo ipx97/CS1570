@@ -1,0 +1,127 @@
+#include "hw8.h"
+
+int main(){
+  
+  //Main Variables
+  char willie[SIZES];
+  char bessey[SIZES];
+  char alec[SIZES];
+  char dino[SIZES];
+  char sir_loin[SIZES];
+  char deadCow[SIZED];
+  
+  char willieT[SIZET];
+  char besseyT[SIZET];
+  char alecT[SIZET];
+  char dinoT[SIZET];
+  char sir_loinT[SIZET];
+  char deadCowT[SIZET];
+  
+  //Greeting
+  greeting();
+  
+  //Assigns random values to arrays
+  createSample(willie);
+  createSample(bessey);
+  createSample(alec);
+  createSample(dino);
+  createSample(sir_loin);
+  
+  //Runs 3 times
+  for(int i = 0;i<3;i++){
+    createDead(deadCow);
+  
+    //Tries to find a match for each cow
+    if (findMatch(willie, deadCow)){
+      cout<<"\n\nWillie was found dead.\n\n";
+      cout<<"Willie\n";
+      printArray(willie,SIZES);
+      cout<<"\nDead Cow\n";
+      printArray(deadCow,SIZED);
+    }
+    else if (findMatch(bessey, deadCow)){
+      cout<<"\n\nBessey was found dead.\n\n";
+      cout<<"Bessey\n";
+      printArray(bessey,SIZES);
+      cout<<"\nDead Cow\n";
+      printArray(deadCow,SIZED);
+    }
+    else if (findMatch(alec, deadCow)){
+      cout<<"\n\nAlec was found dead.\n\n";
+      cout<<"Alec\n";
+      printArray(alec,SIZES);
+      cout<<"\nDead Cow\n";
+      printArray(deadCow,SIZED);
+    }
+    else if (findMatch(dino, deadCow)){
+      cout<<"\n\nDino was found dead.\n\n";
+      cout<<"Dino\n";
+      printArray(dino,SIZES);
+      cout<<"\nDead Cow\n";
+      printArray(deadCow,SIZED);
+    }
+    else if (findMatch(sir_loin, deadCow)){
+      cout<<"\n\nSir Loin was found dead.\n\n";
+      cout<<"Sir Loin\n";
+      printArray(sir_loin,SIZES);
+      cout<<"\nDead Cow\n";
+      printArray(deadCow,SIZED);
+    }
+  
+    //If that fails, it goes to test 2
+    else{
+    
+      //Creates random dental records
+      createDental(willieT);
+      createDental(besseyT);
+      createDental(alecT);
+      createDental(dinoT);
+      createDental(sir_loinT);
+      createDental(deadCowT);
+    
+      //Compares dental records for an exact match
+      if ((strcmp(deadCow,willieT)) == 0){
+        cout<<"\n\nWillie was found dead.\n\n";
+        cout<<"Willie\n";
+        printArray(willie,SIZES);
+        cout<<"\nDead Cow\n";
+        printArray(deadCow,SIZED);
+      }
+      else if ((strcmp(deadCow,besseyT)) == 0){
+        cout<<"\n\nBessey was found dead.\n\n";
+        cout<<"Bessey\n";
+        printArray(bessey,SIZES);
+        cout<<"\nDead Cow\n";
+        printArray(deadCow,SIZED);
+      }
+      else if ((strcmp(deadCow,alecT)) == 0){
+        cout<<"\n\nAlec was found dead.\n\n";
+        cout<<"Alec\n";
+        printArray(alec,SIZES);
+        cout<<"\nDead Cow\n";
+        printArray(deadCow,SIZED);
+      }
+      else if ((strcmp(deadCow,dinoT)) == 0){
+        cout<<"\n\nDino was found dead.\n\n";
+        cout<<"Dino\n";
+        printArray(dino,SIZES);
+        cout<<"\nDead Cow\n";
+        printArray(deadCow,SIZED);
+      }
+      else if ((strcmp(deadCow,sir_loinT)) == 0){
+        cout<<"\n\nSir Loin was found dead.\n\n";
+        cout<<"Sir Loin\n";
+        printArray(sir_loin,SIZES);
+        cout<<"\nDead Cow\n";
+        printArray(deadCow,SIZED);
+      }
+  
+      else
+        cout<<"\nNo match found for that cow.\n";
+    }
+  }
+  //Signs off
+  signoff();
+  
+  return 0;
+}

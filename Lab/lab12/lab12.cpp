@@ -1,0 +1,87 @@
+#include "lab12.h"
+
+void Time::read_in(){
+  do{
+    cout<<"Enter the hour:";
+    cin>>hour;
+    if (hour>23 || hour<0)
+      cout<<"INVALID HOUR\n";
+  }while(hour>23 || hour<0);
+  
+  do{
+    cout<<"Enter the minute:";
+    cin>>minute;
+    if (minute>59 || minute<0)
+      cout<<"INVALID MINUTE\n";
+  }while(minute>59 || minute<0);
+  
+  do{
+    cout<<"Enter the second:";
+    cin>>second;
+    if (second>59 || second<0)
+      cout<<"INVALID SECOND\n";
+  }while(second>59 || second<0);
+  
+  cout<<endl;
+  
+  return;
+}
+
+void Time::print_out(int second,int minute,int hour){
+  cout<<"time is: "<<hour<<":"<<minute<<":"<<second<<endl;
+  return;
+}
+
+void Time::nextSecond(){
+  int nsecond = second;
+  int nminute = minute;
+  int nhour = hour;
+  
+  nsecond++;
+  
+  //Keeps the numbers from going over 59 or 23 for hours
+  if (nsecond > 59){
+    nsecond = 0;
+    nminute++;
+  }
+  
+  if (nminute > 59){
+    nminute = 0;
+    nhour++;
+  }
+  
+  if (nhour > 23)
+    nhour = 0;
+  
+  cout<<"next ";  
+  print_out(nsecond,nminute,nhour);
+  
+  return;
+}
+
+void Time::previousSecond(){
+  int psecond = second;
+  int pminute = minute;
+  int phour = hour;
+  
+  psecond--;
+  
+  //Keeps the numbers from going into the negatives
+  if (psecond < 0){
+    psecond = 59;
+    pminute--;
+  }
+  
+  if (pminute < 0){
+    pminute = 59;
+    phour--;
+  }
+  
+  if (phour < 0)
+    phour = 23;
+  
+  cout<<"previous ";  
+  print_out(psecond,pminute,phour);
+  
+  return;
+}

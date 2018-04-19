@@ -1,0 +1,37 @@
+/*
+Programmer: Ian Piskulic      Date: 4/1/2015
+File: hw8.h                 Section: B
+Purpose: To match the bullet information with a gun.
+*/
+
+
+#include <iostream>
+#include <cstdlib> 
+#include <ctime>
+#include <cstring>
+
+using namespace std;
+
+#ifndef HW8_H
+#define HW8_H
+
+//Prototypes
+
+//Description: Greets the user at the start of the program.
+//Pre: none
+//Post: Prints a welcome message to the console
+void greeting();
+void createSample(char arr[]);
+void deadCow(char arr[]);
+bool findMatch(char sample[], char dead[]);
+void printArray(char arr[], int SIZE);
+void createDental(char arr[]);
+void signoff();
+
+//Global Constants
+
+const int SIZED = 17;
+const int SIZES = 129;
+const int SIZET = 33;
+
+#endif

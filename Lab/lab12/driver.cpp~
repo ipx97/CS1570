@@ -1,0 +1,24 @@
+#include "lab12.h"
+
+int main(){
+  
+  //Main Variables
+  char decision = 'y';
+  Time t;
+  
+  while (decision == 'y'){
+    do{
+      cout<<"\nWould you like to enter a time?(y/n):";
+      cin>>decision;
+    }while(decision != 'n' && decision != 'y');
+  
+    if (decision == 'y'){
+      t.read_in();
+      t.print_out(t.second,t.minute,t.hour);
+      t.nextSecond();
+      t.previousSecond();      
+      
+    }
+  }
+  cout<<"\n\nGoodbye!";
+}
