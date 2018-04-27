@@ -18,16 +18,15 @@ using namespace std;
 #define RES_H
 
 //Class
-class resident{
-  public:
-    string m_name;
-    bool m_isAlive,m_isMurderer;
-    int m_hair;
-  //public:
-    resident();
-    void hair_color_change(int newHair);
-    void kill_me();
-    friend ostream &operator << (ostream &out, resident &res);
+class resident {
+public:
+	string m_name;
+	bool m_isAlive, m_isMurderer;
+	int m_hair;
+	resident();
+	void hair_color_change(int newHair);
+	void kill_me();
+	friend ostream &operator << (ostream &out, resident &res);
 };
 
 #endif

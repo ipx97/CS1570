@@ -23,18 +23,16 @@ const char STAR = '*';
 const char SPACE = ' ';
 
 //Structs
-struct finger_print{
-  char m_array [SIZE2D][SIZE2D];
-  int m_loops;
-  int m_arches;
-  int m_whirls;
+struct finger_print {
+	char m_array[SIZE2D][SIZE2D];
+	int m_loops, m_arches, m_whirls;
 };
 
-struct forensic_data{
-  int m_hairColor;
-  char m_dna[DNA_SIZE];
-  finger_print m_print;
-  forensic_data & operator = (const forensic_data & rhs);
+struct forensic_data {
+	int m_hairColor;
+	char m_dna[DNA_SIZE];
+	finger_print m_print;
+	forensic_data & operator = (const forensic_data & rhs);
 };
 
 

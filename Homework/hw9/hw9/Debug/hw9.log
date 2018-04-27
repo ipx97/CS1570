@@ -1,7 +1,5 @@
-﻿  res.cpp
-  Generating Code...
-  Compiling...
-  room.cpp
+﻿  room.cpp
+  res.cpp
   driver.cpp
 c:\users\ian\documents\github\cs1570\homework\hw9\hw9\driver.cpp(11): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating Code...

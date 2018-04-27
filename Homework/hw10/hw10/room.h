@@ -17,33 +17,33 @@ using namespace std;
 #define ROOM_H
 
 //Class
-class CrimeRoom{
-    bool m_murderCommitted;
-    forensic_data m_dropData;
-    string m_deadGuy;
-  public:
-    //default constructor
-    CrimeRoom();
-    //Description:creates meetings between residents
-    //Pre: two random residents
-    //Post: outputs what the outcome was
-    void meeting(Resident & a,Resident & b);
-    //Description: determines if a murder happens
-    //Pre: none
-    //Post: true or false of murder
-    bool murder();
-    //Description: checks room for dead person
-    //Pre: two residents
-    //Post: outputs who was found dead and if a murder occured
-    bool check_room(const Resident a,const Resident b);
-    //Description: 
-    //Pre:
-    //Post:
-    forensic_data getEvidence() const {return m_dropData;}
-    //Description:
-    //Pre:
-    //Post:
-    void reset();
+class CrimeRoom {
+	bool m_murderCommitted;
+	forensic_data m_dropData;
+	string m_deadGuy;
+public:
+	//default constructor
+	CrimeRoom();
+	//Description:creates meetings between residents
+	//Pre: two random residents
+	//Post: outputs what the outcome was
+	void meeting(Resident & a, Resident & b);
+	//Description: determines if a murder happens
+	//Pre: none
+	//Post: true or false of murder
+	bool murder();
+	//Description: checks room for dead person
+	//Pre: two residents
+	//Post: outputs who was found dead and if a murder occured
+	bool check_room(const Resident a, const Resident b);
+	//Description: 
+	//Pre:
+	//Post:
+	forensic_data getEvidence() const { return m_dropData; }
+	//Description:
+	//Pre:
+	//Post:
+	void reset();
 };
 
 #endif

@@ -36,7 +36,7 @@ int resCount(Resident res[]);
 //     and a murder scene
 //Post: outputs who the murderer was if found
 void investigation(CSI_Agent & agent, Resident res[],
-  const CrimeRoom & room, Judicial & judge);
+	const CrimeRoom & room, Judicial & judge);
 //Description: outputs if the last person alive (if any)
 //Pre: takes in the array of residents
 //Post: outputs who the last resident alive is or if there

@@ -18,15 +18,15 @@ using namespace std;
 #define ROOM_H
 
 //Class
-class crime_room{
-    bool m_murderCommitted;
-    int m_hair;
-    string m_deadGuy;
-  public:
-    crime_room();
-    void meeting(resident & a,resident & b);
-    bool murder();
-    void check_room();
+class crime_room {
+	bool m_murderCommitted;
+	int m_hair;
+	string m_deadGuy;
+public:
+	crime_room();
+	void meeting(resident & a, resident & b);
+	bool murder();
+	void check_room();
 };
 
 #endif

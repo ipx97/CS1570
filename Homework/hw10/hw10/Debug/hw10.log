@@ -1,1 +1,3 @@
-﻿  hw10.vcxproj -> C:\Users\Ian\Documents\GitHub\CS1570\Homework\hw10\Debug\hw10.exe
+﻿  driver.cpp
+c:\users\ian\documents\github\cs1570\homework\hw10\hw10\driver.cpp(6): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  hw10.vcxproj -> C:\Users\Ian\Documents\GitHub\CS1570\Homework\hw10\Debug\hw10.exe
